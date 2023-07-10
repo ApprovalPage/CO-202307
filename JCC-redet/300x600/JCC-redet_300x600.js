@@ -642,24 +642,26 @@ if (reversed == null) { reversed = false; }
 	this.timeline.addTween(cjs.Tween.get(this.instance_3).wait(526).to({_off:false},0).to({alpha:1},12).wait(1));
 
 	// BKGD3
-	this.instance_4 = new lib.BKGD2();
-	this.instance_4.setTransform(150.05,299.95,1,1,0,0,0,0.1,299.9);
+	this.instance_4 = new lib.BKGD3();
+	this.instance_4.setTransform(150,300,1,1,0,0,0,0,300);
 	this.instance_4.alpha = 0.1016;
 	this.instance_4._off = true;
 
-	this.instance_5 = new lib.BKGD3();
-	this.instance_5.setTransform(150,300,1,1,0,0,0,0,300);
+	this.timeline.addTween(cjs.Tween.get(this.instance_4).wait(347).to({_off:false},0).to({alpha:1},12).to({_off:true},179).wait(1));
+
+	// BKGD2
+	this.instance_5 = new lib.BKGD2();
+	this.instance_5.setTransform(150.05,299.95,1,1,0,0,0,0.1,299.9);
 	this.instance_5.alpha = 0.1016;
 	this.instance_5._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_4).wait(167).to({_off:false},0).to({regX:0,regY:300,x:150,y:300,alpha:1},12,cjs.Ease.quadOut).to({_off:true},168).wait(192));
-	this.timeline.addTween(cjs.Tween.get(this.instance_5).wait(347).to({_off:false},0).to({alpha:1},12).wait(180));
+	this.timeline.addTween(cjs.Tween.get(this.instance_5).wait(167).to({_off:false},0).to({regX:0,regY:300,x:150,y:300,alpha:1},12,cjs.Ease.quadOut).to({_off:true},181).wait(179));
 
 	// BKGD1
 	this.instance_6 = new lib.BKGD1();
 	this.instance_6.setTransform(150,300,1,1,0,0,0,0,300);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_6).wait(539));
+	this.timeline.addTween(cjs.Tween.get(this.instance_6).to({_off:true},180).wait(359));
 
 	this._renderFirstFrame();
 
